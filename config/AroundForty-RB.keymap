@@ -43,6 +43,13 @@
             bindings = <&kp LC(Y)>;
             label = "REDO";
         };
+
+        cut: cut {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(X)>;
+            label = "CUT";
+        };
     };
 
     behaviors {
@@ -100,10 +107,10 @@
 
         Mac-Common_Layer {
             bindings = <
-&kp ESCAPE      &trans        &trans       &kp LG(UP_ARROW)    &trans                       &kp LG(W)        &kp LG(LEFT_ARROW)  &mkp MB3        &kp LG(RIGHT_ARROW)  &kp HOME
-&kp TAB         &kp LEFT_GUI  &kp LS(TAB)  &kp LG(LEFT_ARROW)  &kp LG(RIGHT_ARROW)          &kp LG(TAB)      &mkp MB1            &kp UP_ARROW    &mkp MB2             &kp PAGE_UP
-&kp LEFT_SHIFT  &trans        &trans       &kp LG(DOWN_ARROW)  &trans               &trans  &kp LG(LS(TAB))  &kp LEFT_ARROW      &kp DOWN_ARROW  &kp RIGHT_ARROW      &kp PAGE_DOWN
-&kp LCTRL       &trans        &trans       &trans              &trans               &trans  &trans           &kp LG(T)           &trans          &trans               &kp END
+&kp AT_SIGN  &kp HASH        &kp DOLLAR  &kp PERCENT      &kp CARET          &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL
+&kp LCTRL    &kp LEFT_SHIFT  &kp TAB     &kp LEFT_ALT     &kp LWIN           &kp HOME       &kp LEFT      &kp UP_ARROW          &kp DOWN               &kp RIGHT
+&trans       &trans          &kp TILDE   &kp EXCLAMATION  &trans     &trans  &kp END        &trans        &kp LESS_THAN         &kp GREATER_THAN       &kp SINGLE_QUOTE
+&trans       &trans          &trans      &trans           &trans     &trans  &trans         &trans        &trans                &trans                 &trans
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -144,7 +151,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans          &trans  &trans    &trans    &trans    &trans
 &trans  &trans  &trans  &trans  &trans          &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
-&trans  &trans  &copy   &paste  &copy   &trans  &trans  &trans    &trans    &trans    &trans
+&undo   &cut    &copy   &paste  &redo   &trans  &trans  &trans    &trans    &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans
             >;
         };
