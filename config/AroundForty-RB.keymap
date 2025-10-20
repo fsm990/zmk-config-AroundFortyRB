@@ -39,7 +39,7 @@
 &trans       &trans          &trans      &trans           &trans     &trans  &trans         &trans        &trans                &trans                 &trans
             >;
 
-            sensor-bindings = <&none>;
+
         };
 
         Num_Layer {
@@ -50,7 +50,7 @@
 &trans           &trans        &trans          &trans           &trans   &trans  &kp PERIOD    &kp EQUAL     &kp COMMA     &kp LEFT_BRACKET  &kp RIGHT_BRACKET
             >;
 
-            sensor-bindings = <&none>;
+
         };
 
         Setting_Layer {
@@ -61,7 +61,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &bootloader   &trans        &sys_reset    &trans        &trans
             >;
 
-            sensor-bindings = <&none>;
+
         };
     };
 };
