@@ -26,7 +26,7 @@
             bindings = <
 &trans            &trans          &trans     &trans     &trans                     &trans  &trans           &mkp MB4      &mkp MB5       &kp MINUS
 &kp LEFT_CONTROL  &kp LEFT_SHIFT  &trans     &trans     &trans                     &trans  &mkp MB1         &mkp MB3      &mkp MB2       &kp BACKSLASH
-&kp LC(Z)         &kp LC(X)       &kp LC(C)  &kp LC(V)  &kp LC(Y)  &kp LEFT_SHIFT  &trans  &mkp SCRL_MODE  &kp LC(PLUS)  &kp LC(MINUS)  &msc MOVE_X(20)
+&kp LC(Z)         &kp LC(X)       &kp LC(C)  &kp LC(V)  &kp LC(Y)  &kp LEFT_SHIFT  &trans  &mkp SCRL_MODE   &kp LC(PLUS)  &kp LC(MINUS)  &msc MOVE_X(20)
 &trans            &trans          &trans     &trans     &trans     &trans          &trans  &trans           &trans        &trans         &trans
             >;
         };
