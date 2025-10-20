@@ -15,10 +15,10 @@
 
         Default_Layer {
             bindings = <
-&kp Q      &kp W         &kp E         &kp R                      &kp T                        &kp Y      &kp U       &kp I          &kp O             &kp P
-&kp A      &kp S         &kp D         &kp F                      &kp G                        &kp H      &kp J       &kp K          &kp L             &lt 1 SEMICOLON
-&kp Z      &kp X         &kp C         &kp V                      &kp B        &kp LEFT_SHIFT  &kp N      &kp M       &kp COMMA      &kp PERIOD        &kp SLASH
-&kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI  &lt 2 LANG_ZENKAKUHANKAKU  &lt 1 SPACE  &lt 3 DELETE    &kp ENTER  &kp ESCAPE  &kp BACKSPACE  &kp LEFT_BRACKET  &lt 4 RIGHT_BRACKET
+&kp Q      &kp W         &kp E         &kp R               &kp T                        &kp Y      &kp U       &kp I          &kp O             &kp P
+&kp A      &kp S         &kp D         &kp F               &kp G                        &kp H      &kp J       &kp K          &kp L             &lt 1 SEMICOLON
+&kp Z      &kp X         &kp C         &kp V               &kp B        &kp LEFT_SHIFT  &kp N      &kp M       &kp COMMA      &kp PERIOD        &kp SLASH
+&kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI  &lt 2 LS(CAPSLOCK)  &lt 1 SPACE  &lt 3 DELETE    &kp ENTER  &kp ESCAPE  &kp BACKSPACE  &kp LEFT_BRACKET  &lt 4 RIGHT_BRACKET
             >;
         };
 
@@ -44,7 +44,7 @@
             bindings = <
 &kp LC(LA(DEL))  &trans        &kp LG(E)       &kp LG(R)        &trans           &kp PLUS      &kp N7        &kp N8        &kp N9            &kp MINUS
 &kp TAB          &kp F2        &kp F4          &kp F8           &kp F10          &kp ASTERISK  &kp NUMBER_4  &kp N5        &kp NUMBER_6      &kp COLON
-&mmv MOVE_LEFT   &mmv MOVE_UP  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans   &trans  &kp N0        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3      &kp SLASH
+&msc SCRL_LEFT   &msc SCRL_UP  &msc SCRL_DOWN  &msc SCRL_RIGHT  &trans   &trans  &kp N0        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3      &kp SLASH
 &trans           &trans        &trans          &trans           &trans   &trans  &kp PERIOD    &kp EQUAL     &kp COMMA     &kp LEFT_BRACKET  &kp RIGHT_BRACKET
             >;
         };
