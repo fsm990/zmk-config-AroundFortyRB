@@ -7,32 +7,8 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
-&mt {
-    flavor = "balanced";
-    quick-tap-ms = <0>;
-};
-
 / {
     combos { compatible = "zmk,combos"; };
-
-    behaviors {
-        lt_to_layer_0: lt_to_layer_0 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_TAP_TO_0";
-            bindings = <&mo>, <&copy>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
-
-        scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-
-            tap-ms = <20>;
-        };
-    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -63,7 +39,7 @@
 &trans       &trans          &trans      &trans           &trans     &trans  &trans         &trans        &trans                &trans                 &trans
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&none>;
         };
 
         Num_Layer {
@@ -74,7 +50,7 @@
 &trans           &trans        &trans          &trans           &trans   &trans  &kp PERIOD    &kp EQUAL     &kp COMMA     &kp LEFT_BRACKET  &kp RIGHT_BRACKET
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&none>;
         };
 
         Setting_Layer {
@@ -85,7 +61,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &bootloader   &trans        &sys_reset    &trans        &trans
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&none>;
         };
     };
 };
