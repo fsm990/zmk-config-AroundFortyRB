@@ -1,4 +1,4 @@
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 100
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 50
 #define MOUSE 6
 
 #include <behaviors/rgbled_widget.dtsi>  // needed to use the behaviors
@@ -17,8 +17,8 @@
             bindings = <
 &kp Q      &kp W         &kp E         &kp R               &kp T                        &kp Y      &kp U       &kp I          &kp O             &kp P
 &kp A      &kp S         &kp D         &kp F               &kp G                        &kp H      &kp J       &kp K          &kp L             &lt 1 SEMICOLON
-&kp Z      &kp X         &kp C         &kp V               &kp B        &kp LEFT_SHIFT  &kp N      &kp M       &kp COMMA      &kp PERIOD        &kp SLASH
-&kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI  &lt 2 LS(CAPSLOCK)  &lt 1 SPACE  &lt 3 DELETE    &kp ENTER  &kp ESCAPE  &kp BACKSPACE  &kp LEFT_BRACKET  &lt 4 RIGHT_BRACKET
+&kp Z      &kp X         &kp C         &kp V               &kp B        &kp LCTRL  &kp N      &kp M       &kp COMMA      &kp PERIOD        &kp SLASH
+&kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_GUI  &lt 2 LS(CAPSLOCK)  &lt 1 SPACE  &lt 3 DELETE    &kp ENTER  &kp ESCAPE  &kp BACKSPACE  &kp LEFT_BRACKET  &lt 4 RIGHT_BRACKET
             >;
         };
 
@@ -26,7 +26,7 @@
             bindings = <
 &trans            &trans          &trans     &trans     &trans                     &trans  &trans           &mkp MB4      &mkp MB5       &kp MINUS
 &kp LEFT_CONTROL  &kp LEFT_SHIFT  &trans     &trans     &trans                     &trans  &mkp MB1         &mkp MB3      &mkp MB2       &kp BACKSLASH
-&kp LC(Z)         &kp LC(X)       &kp LC(C)  &kp LC(V)  &kp LC(Y)  &kp LEFT_SHIFT  &trans  &mkp SCRL_MODE   &kp LC(PLUS)  &kp LC(MINUS)  &msc MOVE_X(20)
+&kp LC(Z)         &kp LC(X)       &kp LC(C)  &kp LC(V)  &kp LC(Y)  &kp LEFT_SHIFT  &trans  &trans   &kp LC(PLUS)  &kp LC(MINUS)  &msc MOVE_X(20)
 &trans            &trans          &trans     &trans     &trans     &trans          &trans  &trans           &trans        &trans         &trans
             >;
         };
