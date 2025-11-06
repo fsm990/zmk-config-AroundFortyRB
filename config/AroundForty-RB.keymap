@@ -9,37 +9,7 @@
 
 / {
     combos { compatible = "zmk,combos"; };
-
-    macros {
-        expand: expand {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL>,
-                <&macro_tap>,
-                <&kp K_SCROLL_UP>,
-                <&macro_release>,
-                <&kp LEFT_CONTROL>;
-
-            label = "EXPAND";
-        };
-
-        shrink: shrink {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_CONTROL>,
-                <&macro_tap>,
-                <&kp K_SCROLL_DOWN>,
-                <&macro_release>,
-                <&kp LEFT_CONTROL>;
-
-            label = "SHRINK";
-        };
-    };
-
+   
     keymap {
         compatible = "zmk,keymap";
 
