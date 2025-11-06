@@ -1,8 +1,7 @@
- / {
+/ {
     macros {
         zoom_in: zoom_in {
             compatible = "zmk,behavior-macro";
-            label = "ZOOM_IN";
             bindings = <
                 &macro_press &kp LEFT_CONTROL
                 &macro_tap &msc SCRL_UP
@@ -12,7 +11,6 @@
 
         zoom_out: zoom_out {
             compatible = "zmk,behavior-macro";
-            label = "ZOOM_OUT";
             bindings = <
                 &macro_press &kp LEFT_CONTROL
                 &macro_tap &msc SCRL_DOWN
