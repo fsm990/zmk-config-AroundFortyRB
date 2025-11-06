@@ -7,45 +7,6 @@
 #include <dt-bindings/zmk/pointing.h>
 
 / {
-    behaviors {
-        macro_press: macro_press {
-            compatible = "zmk,behavior-macro-press";
-            label = "MACRO_PRESS";
-        };
-
-        macro_tap: macro_tap {
-            compatible = "zmk,behavior-macro-tap";
-            label = "MACRO_TAP";
-        };
-
-        macro_release: macro_release {
-            compatible = "zmk,behavior-macro-release";
-            label = "MACRO_RELEASE";
-        };
-    };
-
-    macros {
-        zoom_in: zoom_in {
-            compatible = "zmk,behavior-macro";
-            bindings = <
-                &macro_press &kp LEFT_CONTROL
-                &macro_tap &msc SCRL_UP
-                &macro_release &kp LEFT_CONTROL
-            >;
-        };
-
-        zoom_out: zoom_out {
-            compatible = "zmk,behavior-macro";
-            bindings = <
-                &macro_press &kp LEFT_CONTROL
-                &macro_tap &msc SCRL_DOWN
-                &macro_release &kp LEFT_CONTROL
-            >;
-        };
-    };
-};
-
-/ {
     combos { compatible = "zmk,combos"; };
 
     keymap {
@@ -54,9 +15,9 @@
         Default_Layer {
             bindings = <
                 &kp Q           &kp W         &kp E         &kp R               &kp T                      &kp Y      &kp U       &kp I          &kp O             &kp P
-                &kp A           &kp S         &kp D         &kp F               &kp G                      &kp H      &kp J       &kp K          &kp L             &1 SEMICOLON
+                &kp A           &kp S         &kp D         &kp F               &kp G                      &kp H      &kp J       &kp K          &kp L             &lt 1 SEMICOLON
                 &kp Z           &kp X         &kp C         &kp V               &kp B        &kp LCTRL     &kp N      &kp M       &kp COMMA      &kp PERIOD        &kp SLASH
-                &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_GUI  &2 LS(CAPSLOCK)     &1 SPACE     &3 DELETE     &kp ENTER  &kp ESCAPE  &kp BACKSPACE  &kp LEFT_BRACKET  &4 RIGHT_BRACKET
+                &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_GUI  &lt 2 LS(CAPSLOCK)    &lt 1 SPACE     &lt 3 DELETE    &kp ENTER  &kp ESCAPE  &kp BACKSPACE  &kp LEFT_BRACKET  &lt 4 RIGHT_BRACKET
             >;
         };
 
@@ -64,8 +25,8 @@
             bindings = <
                 &trans            &trans          &trans     &trans     &trans             &trans  &trans    &mkp MB4  &mkp MB5  &kp MINUS
                 &kp LEFT_CONTROL  &kp LEFT_SHIFT  &trans     &trans     &trans             &trans  &mkp MB1  &mkp MB3  &mkp MB2  &kp BACKSLASH
-                &kp LC(Z)         &kp LC(X)       &kp LC(C)  &kp LC(V)  &kp LC(Y)  &trans  &trans  &trans    &zoom_in   &zoom_out   &trans
-                &trans            &trans          &trans     &trans     &trans     &trans  &trans  &trans    &trans    &trans    &trans
+                &kp LC(Z)         &kp LC(X)       &kp LC(C)  &kp LC(V)  &kp LC(Y)  &trans  &trans  &trans    &trans     &trans     &trans
+                &trans            &trans          &trans     &trans     &trans     &trans  &trans  &trans    &trans     &trans     &trans
             >;
         };
 
