@@ -1,0 +1,9 @@
+/ {
+    behaviors {
+        slow_mouse: behavior {
+            compatible = "zmk,mouse-speed";
+            label = "SLOW_MOUSE";
+            speed = <0.3>; // 通常より遅くする
+        };
+    };
+};
