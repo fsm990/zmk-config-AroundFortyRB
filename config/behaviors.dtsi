@@ -8,7 +8,7 @@
     };
 };
 
-/ {
+ / {
     macros {
         zoom_in: zoom_in {
             compatible = "zmk,behavior-macro";
