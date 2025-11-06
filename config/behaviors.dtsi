@@ -1,13 +1,3 @@
-/ {
-    behaviors {
-        slow_mouse: behavior {
-            compatible = "zmk,mouse-speed";
-            label = "SLOW_MOUSE";
-            speed = <300>; // 通常より遅くする
-        };
-    };
-};
-
  / {
     macros {
         zoom_in: zoom_in {
