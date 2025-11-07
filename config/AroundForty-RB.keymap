@@ -1,14 +1,48 @@
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 100
 #define MOUSE 6
 
-#include <behaviors/rgbled_widget.dtsi>  // needed to use the behaviors
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
 / {
-    combos { compatible = "zmk,combos"; };
+    behaviors {
+        macro_press: macro_press {
+            compatible = "zmk,behavior-macro-press";
+            label = "MACRO_PRESS";
+        };
+
+        macro_tap: macro_tap {
+            compatible = "zmk,behavior-macro-tap";
+            label = "MACRO_TAP";
+        };
+
+        macro_release: macro_release {
+            compatible = "zmk,behavior-macro-release";
+            label = "MACRO_RELEASE";
+        };
+    };
+
+    macros {
+        zoom_in: zoom_in {
+            compatible = "zmk,behavior-macro";
+            bindings = <
+                &macro_press &kp LEFT_CONTROL
+                &macro_tap &msc SCRL_UP
+                &macro_release &kp LEFT_CONTROL
+            >;
+        };
+
+        zoom_out: zoom_out {
+            compatible = "zmk,behavior-macro";
+            bindings = <
+                &macro_press &kp LEFT_CONTROL
+                &macro_tap &msc SCRL_DOWN
+                &macro_release &kp LEFT_CONTROL
+            >;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
