@@ -26,7 +26,7 @@
             bindings = <
 &trans            &trans          &trans     &trans     &trans             &trans  &trans    &mkp MB4         &mkp MB5  &kp MINUS
 &kp LEFT_CONTROL  &kp LEFT_SHIFT  &trans     &trans     &trans             &trans  &mkp MB1  &mkp MB3         &mkp MB2  &kp BACKSLASH
-&kp LC(Z)         &kp LC(X)       &kp LC(C)  &kp LC(V)  &kp LC(Y)  &trans  &trans  &trans    &msc MOVE_Y(20)  &trans    &trans
+&kp LC(Z)         &kp LC(X)       &kp LC(C)  &kp LC(V)  &kp LC(Y)  &trans  &trans  &trans    &zoom_in         &zoom_out    &trans
 &trans            &trans          &trans     &trans     &trans     &trans  &trans  &trans    &trans           &trans    &trans
             >;
         };
