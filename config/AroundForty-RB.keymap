@@ -41,10 +41,10 @@ layer_0 {
 >;};layer_2 {
          bindings = <
 
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&kp AT_SIGN       &kp HASH        &kp DOLLAR  &kp PERCENT      &kp CARET             &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL
+&kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp TAB     &kp LEFT_ALT     &kp LEFT_WIN          &kp HOME       &kp LEFT      &kp UP_ARROW          &kp DOWN               &kp RIGHT
+&trans            &trans          &kp TILDE   &kp EXCLAMATION  &trans        &trans  &kp END        &trans        &kp LESS_THAN         &kp GREATER_THAN       &kp SQT
+&trans            &trans          &trans      &trans           &trans        &trans  &trans         &trans        &trans                &trans                 &trans
 >;};layer_3 {
          bindings = <
 
