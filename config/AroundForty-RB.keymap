@@ -6,53 +6,52 @@
 #include <dt-bindings/zmk/pointing.h>
 
 / {
-    behaviors {
-
-
-    };
-
- 
     keymap {
         compatible = "zmk,keymap";
 
-
-
-
-layer_0 {
-         bindings = <
-
+        Default_Layer {
+            bindings = <
 &kp Q             &kp W         &kp E         &kp R           &kp T                        &kp Y      &kp U       &kp I          &kp O             &kp P
 &kp A             &kp S         &kp D         &kp F           &kp G                        &kp H      &kp J       &kp K          &kp L             &lt 1 SEMICOLON
 &kp Z             &kp X         &kp C         &kp V           &kp B        &kp LEFT_SHIFT  &kp N      &kp M       &kp COMMA      &kp PERIOD        &kp SLASH
 &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_WIN  &lt 2 LS(CAPS)  &lt 1 SPACE  &lt 3 DELETE    &kp ENTER  &kp ESCAPE  &kp BACKSPACE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
->;};layer_1 {
-         bindings = <
+            >;
+        };
 
+        Mouse_Layer {
+            bindings = <
 &trans            &trans          &trans     &trans     &trans                     &trans  &trans    &mkp MB4  &mkp MB5  &kp MINUS
 &kp LEFT_CONTROL  &kp LEFT_SHIFT  &trans     &trans     &trans                     &trans  &mkp MB1  &mkp MB3  &mkp MB2  &kp NON_US_BACKSLASH
 &kp LC(Z)         &kp LC(X)       &kp LC(C)  &kp LC(V)  &kp LC(Y)  &kp LEFT_SHIFT  &trans  &trans    &trans    &trans    &trans
 &trans            &trans          &trans     &trans     &trans     &trans          &trans  &trans    &trans    &trans    &trans
->;};layer_2 {
-         bindings = <
+            >;
+        };
 
+        Function_Layer {
+            bindings = <
 &kp AT_SIGN       &kp HASH        &kp DOLLAR  &kp PERCENT      &kp CARET             &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL
 &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp TAB     &kp LEFT_ALT     &kp LEFT_WIN          &kp HOME       &kp LEFT      &kp UP_ARROW          &kp DOWN               &kp RIGHT
 &trans            &trans          &kp TILDE   &kp EXCLAMATION  &trans        &trans  &kp END        &trans        &kp LESS_THAN         &kp GREATER_THAN       &kp SQT
 &trans            &trans          &trans      &trans           &trans        &trans  &trans         &trans        &trans                &trans                 &trans
->;};layer_3 {
-         bindings = <
+            >;
+        };
 
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
->;};layer_4 {
-         bindings = <
+        Num_Layer {
+            bindings = <
+&kp LC(LA(DEL))  &trans        &kp LG(E)       &kp LG(R)        &trans           &kp PLUS      &kp N7        &kp N8        &kp N9            &kp MINUS
+&kp TAB          &kp F2        &kp F4          &kp F8           &kp F10          &kp ASTERISK  &kp NUMBER_4  &kp N5        &kp NUMBER_6      &kp COLON
+&msc SCRL_LEFT   &msc SCRL_UP  &msc SCRL_DOWN  &msc SCRL_RIGHT  &trans   &trans  &kp N0        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3      &kp SLASH
+&trans           &trans        &trans          &trans           &trans   &trans  &kp PERIOD    &kp EQUAL     &kp COMMA     &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+            >;
+        };
 
+        layer_4 {
+            bindings = <
 &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
->;};
+            >;
+        };
     };
 };
