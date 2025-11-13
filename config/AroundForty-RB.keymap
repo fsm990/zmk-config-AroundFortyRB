@@ -12,12 +12,12 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kp LEFT_CONTROL>,
                 <&macro_press>,
-                <&msc SCRL_UP>,
-                <&macro_tap>,
                 <&kp LEFT_CONTROL>,
-                <&macro_release>;
+                <&macro_tap>,
+                <&msc SCRL_UP>,
+                <&macro_release>,
+                <&kp LEFT_CONTROL>;
 
             label = "EXPAND";
         };
@@ -26,12 +26,12 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kp LEFT_CONTROL>,
                 <&macro_press>,
-                <&msc SCRL_DOWN>,
-                <&macro_tap>,
                 <&kp LEFT_CONTROL>,
-                <&macro_release>;
+                <&macro_tap>,
+                <&msc SCRL_DOWN>,
+                <&macro_release>,
+                <&kp LEFT_CONTROL>;
 
             label = "SHRINK";
         };
