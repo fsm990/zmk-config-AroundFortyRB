@@ -7,6 +7,15 @@
 #include <dt-bindings/zmk/pointing.h>
 
 / {
+    macros {
+        initialize: expand {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(LA(LS(DELETE)))>;
+            label = "EXPAND";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -21,10 +30,10 @@
 
         Mouse_Layer {
             bindings = <
-&trans            &trans          &trans     &trans     &trans                     &trans  &trans    &mkp MB4  &mkp MB5  &kp MINUS
-&kp LEFT_CONTROL  &kp LEFT_SHIFT  &trans     &trans     &trans                     &trans  &mkp MB1  &mkp MB3  &mkp MB2  &kp NON_US_BACKSLASH
-&kp LC(Z)         &kp LC(X)       &kp LC(C)  &kp LC(V)  &kp LC(Y)  &kp LEFT_SHIFT  &trans  &trans    &trans    &trans    &trans
-&trans            &trans          &trans     &trans     &trans     &trans          &trans  &trans    &trans    &trans    &trans
+&trans            &trans          &trans     &trans     &trans                     &trans  &trans    &mkp MB4     &mkp MB5  &kp MINUS
+&kp LEFT_CONTROL  &kp LEFT_SHIFT  &trans     &trans     &trans                     &trans  &mkp MB1  &mkp MB3     &mkp MB2  &kp NON_US_BACKSLASH
+&kp LC(Z)         &kp LC(X)       &kp LC(C)  &kp LC(V)  &kp LC(Y)  &kp LEFT_SHIFT  &trans  &trans    &initialize  &trans    &trans
+&trans            &trans          &trans     &trans     &trans     &trans          &trans  &trans    &trans       &trans    &trans
             >;
         };
 
