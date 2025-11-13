@@ -21,6 +21,20 @@
 
             label = "EXPAND";
         };
+
+        shrink: shrink {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LEFT_CONTROL>,
+                <&macro_press>,
+                <&msc SCRL_DOWN>,
+                <&macro_tap>,
+                <&kp LEFT_CONTROL>,
+                <&macro_release>;
+
+            label = "SHRINK";
+        };
     };
 
     keymap {
@@ -39,7 +53,7 @@
             bindings = <
 &trans            &trans          &trans     &trans     &trans                     &trans  &trans    &mkp MB4  &mkp MB5  &kp MINUS
 &kp LEFT_CONTROL  &kp LEFT_SHIFT  &trans     &trans     &trans                     &trans  &mkp MB1  &mkp MB3  &mkp MB2  &kp NON_US_BACKSLASH
-&kp LC(Z)         &kp LC(X)       &kp LC(C)  &kp LC(V)  &kp LC(Y)  &kp LEFT_SHIFT  &trans  &trans    &expand   &trans    &trans
+&kp LC(Z)         &kp LC(X)       &kp LC(C)  &kp LC(V)  &kp LC(Y)  &kp LEFT_SHIFT  &trans  &trans    &expand   &shrink   &trans
 &trans            &trans          &trans     &trans     &trans     &trans          &trans  &trans    &trans    &trans    &trans
             >;
         };
