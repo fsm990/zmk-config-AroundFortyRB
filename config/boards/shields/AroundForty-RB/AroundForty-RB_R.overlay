@@ -23,13 +23,15 @@
         /* 普段（カーソル移動）の速度調整：3/2 = 1.5倍 */
         input-processors = <&zip_xy_scaler 3 2>;
 
-        /* ✅ レイヤー5のときだけスクロール化 */
         scroller {
             layers = <5>;
 
-            /* XY → ホイール/水平ホイールへ変換 + スクロール速度調整 */
             input-processors =
+                /* 1) X(横)を0倍にして水平成分を消す */
+                <&zip_x_scaler 0 1>,
+                /* 2) XY→Scroll変換（Xは0なので水平スクロールは出ない） */
                 <&zip_xy_to_scroll_mapper>,
+                /* 3) スクロール速度調整（好みで） */
                 <&zip_scroll_scaler 1 4>;
         };
     };
