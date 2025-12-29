@@ -40,6 +40,7 @@
     keymap {
         compatible = "zmk,keymap";
 
+        /* layer 0 */
         Default_Layer {
             bindings = <
 &kp Q       &kp W         &kp E         &kp R           &kp T                          &kp Y      &kp U       &kp I          &kp O             &kp P
@@ -49,15 +50,17 @@
             >;
         };
 
+        /* layer 1 */
         Mouse_Layer {
             bindings = <
-&trans            &trans          &trans     &trans     &trans                     &trans  &trans    &mkp MB4  &mkp MB5  &kp MINUS
+&mo 5             &trans          &trans     &trans     &trans                     &trans  &trans    &mkp MB4  &mkp MB5  &kp MINUS
 &kp LEFT_CONTROL  &kp LEFT_SHIFT  &trans     &trans     &trans                     &trans  &mkp MB1  &mkp MB3  &mkp MB2  &kp NON_US_BACKSLASH
 &kp LC(Z)         &kp LC(X)       &kp LC(C)  &kp LC(V)  &kp LC(Y)  &kp LEFT_SHIFT  &trans  &trans    &expand   &shrink   &trans
 &trans            &trans          &trans     &trans     &trans     &trans          &trans  &trans    &trans    &trans    &trans
             >;
         };
 
+        /* layer 2 */
         Function_Layer {
             bindings = <
 &kp AT_SIGN       &kp HASH        &kp DOLLAR  &kp PERCENT      &kp CARET             &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL
@@ -67,6 +70,7 @@
             >;
         };
 
+        /* layer 3 */
         Num_Layer {
             bindings = <
 &kp LC(LA(DEL))  &trans        &kp LG(E)       &kp LG(R)        &trans                  &kp PLUS      &kp N7        &kp N8        &kp N9            &kp MINUS
@@ -76,12 +80,23 @@
             >;
         };
 
+        /* layer 4 */
         Setting_Layer {
             bindings = <
 &trans  &trans  &trans  &trans  &trans          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
 &trans  &trans  &trans  &trans  &trans          &trans        &trans        &trans        &trans        &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans        &trans        &trans        &bt BT_CLR
 &trans  &trans  &trans  &trans  &trans  &trans  &trans        &bootloader   &trans        &trans        &trans
+            >;
+        };
+
+        /* ✅ layer 5 : Scroll_Layer（押してる間だけトラックボールがスクロール） */
+        Scroll_Layer {
+            bindings = <
+&trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans
             >;
         };
     };
