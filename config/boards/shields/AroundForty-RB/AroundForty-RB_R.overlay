@@ -22,8 +22,10 @@
         device = <&trackball>;
 
         /* 普段（カーソル移動）の速度調整：3/2 = 1.5倍 */
-        input-processors =
-             <&zip_xy_scaler 3 2>;
+    input-processors =
+        <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT)>,
+        <&zip_xy_scaler 3 2>;
+
 
 
         scroller {
